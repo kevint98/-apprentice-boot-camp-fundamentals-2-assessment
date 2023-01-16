@@ -6,6 +6,8 @@ class IsogramKata
 {
     public function isIsogram($word): bool
     {
-        return false;
+        $wordAsArray = str_split($word);
+        $uniqueArray = array_unique($wordAsArray);
+        return $wordAsArray == $uniqueArray;
     }
 }
