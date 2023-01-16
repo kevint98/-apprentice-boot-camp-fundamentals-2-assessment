@@ -15,4 +15,9 @@ class IsogramKataTest extends TestCase
         $this->assertEquals(false, $isogram->isIsogram('aba'));
     }
 
+    public function testTrueIsogram()
+    {
+        $isogram = new IsogramKata();
+        $this->assertEquals(true, $isogram->isIsogram("Dermatoglyphics"));
+    }
 }
