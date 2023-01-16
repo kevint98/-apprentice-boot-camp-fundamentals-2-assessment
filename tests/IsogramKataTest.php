@@ -13,11 +13,15 @@ class IsogramKataTest extends TestCase
     {
         $isogram = new IsogramKata();
         $this->assertEquals(false, $isogram->isIsogram('aba'));
+        $this->assertEquals(false, $isogram->isIsogram('moose'));
+        $this->assertEquals(false, $isogram->isIsogram('alphabet'));
     }
 
     public function testTrueIsogram()
     {
         $isogram = new IsogramKata();
         $this->assertEquals(true, $isogram->isIsogram("Dermatoglyphics"));
+        $this->assertEquals(true, $isogram->isIsogram("water"));
+        $this->assertEquals(true, $isogram->isIsogram("QweRty"));
     }
 }
