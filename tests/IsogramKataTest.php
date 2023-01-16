@@ -24,4 +24,16 @@ class IsogramKataTest extends TestCase
         $this->assertEquals(true, $isogram->isIsogram("water"));
         $this->assertEquals(true, $isogram->isIsogram("QweRty"));
     }
+
+    public function testCaseInsensitiveIsogram()
+    {
+        $isogram = new IsogramKata();
+        $this->assertEquals(false, $isogram->isIsogram('mOose'));
+        $this->assertEquals(false, $isogram->isIsogram('AlPhAbet'));
+        $this->assertEquals(false, $isogram->isIsogram('iNtErNeT'));
+
+        $this->assertEquals(true, $isogram->isIsogram("DermatOglyphIcs"));
+        $this->assertEquals(true, $isogram->isIsogram("waTer"));
+        $this->assertEquals(true, $isogram->isIsogram("QweRty"));
+    }
 }
